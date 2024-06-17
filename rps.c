@@ -150,12 +150,9 @@ void update(Board *b) {
 		}
 	}
 	//paste values in main board and free the temp board
-	for (int i=0; i < grid_h - 1; i++) {
-		for (int j=0; j < grid_w - 1; j++) {
-			b->tab[j * grid_h + i] = b2->tab[j * grid_h + i];
-		}
-	}
-	free_board(b2);
+	free(b->tab);
+	b->tab = b2->tab;
+	free(b2);
 }
 
 void main() {
