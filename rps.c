@@ -128,7 +128,7 @@ void update(Board *b) {
 				int n2 = neighbors(b, 2, i, j);
 				int n3 = neighbors(b, 3, i, j);
 				if (n1 > 0 && n1 >= n2 && n1 >= n3)	b2->tab[j * grid_h + i] = 1;
-				if (n2 > 0 && n2 >= n1 && n3 >= n3)	b2->tab[j * grid_h + i] = 2;
+				if (n2 > 0 && n2 >= n1 && n2 >= n3)	b2->tab[j * grid_h + i] = 2;
 				if (n3 > 0 && n3 >= n2 && n3 >= n1)	b2->tab[j * grid_h + i] = 3;
 				if (n1 == 0 && n2 == 0 && n3 == 0)b2->tab[j * grid_h + i] = 0;
 			}
